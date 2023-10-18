@@ -62,9 +62,9 @@ class MainActivity : AppCompatActivity() {
                     return@setOnClickListener
                 }
                 if (input.text.length > 2 &&
+                    (button.text.toString() == "0") &&
                     (input.text.last() == '0') &&
-                    input.text[input.text.length - 2].isDigit() &&
-                    (button.text == "0")) {
+                    !input.text[input.text.length - 2].isDigit()) {
                     return@setOnClickListener
                 }
                 if (input.text.toString() == "0") {
