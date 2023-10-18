@@ -256,6 +256,7 @@ class Lexer(private var input: String) {
             ""
         }
         input += bracketsToAdd
+        input = input.replace(',', '.')
     }
 
     fun getNextToken(): Token {
