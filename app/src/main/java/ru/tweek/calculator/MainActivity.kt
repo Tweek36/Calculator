@@ -257,6 +257,13 @@ class Lexer(private var input: String) {
         }
         input += bracketsToAdd
         input = input.replace(',', '.')
+
+        val regex = Regex("(?<![0-9])-")
+
+        input = regex.replace(input) {
+            "0${it.value}"
+        }
+
     }
 
     fun getNextToken(): Token {
