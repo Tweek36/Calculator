@@ -12,6 +12,7 @@ import java.util.LinkedList
 import java.util.Stack
 import kotlin.math.pow
 import kotlin.math.sqrt
+import java.math.BigDecimal
 
 class MainActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
@@ -402,11 +403,10 @@ class Parser(private val lexer: Lexer) {
     }
 }
 
-fun formatDouble(doubleValue: Double): String {
-    val formattedValue = if (doubleValue == doubleValue.toInt().toDouble()) {
-        String.format("%.0f", doubleValue)
+fun formatDouble(input: Double): String {
+    return if (input == input.toInt().toDouble()) {
+        input.toInt().toString()
     } else {
-        String.format("%.1f", doubleValue)
+        BigDecimal(String.format("%.6f", input)).stripTrailingZeros().toPlainString()
     }
-    return formattedValue
 }
