@@ -7,28 +7,16 @@
     android:padding="10dp"
     tools:context=".MainActivity">
 
-    <ListView
-        android:id="@+id/list"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:stackFromBottom="true"
-        app:layout_constraintBottom_toTopOf="@id/input"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_weight="1" />
-
     <TextView
         android:id="@+id/input"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/_0"
+        android:layout_height="0dp"
         android:textAlignment="textEnd"
         android:textSize="26sp"
-        app:layout_constraintBottom_toTopOf="@id/output"
+        app:layout_constraintBottom_toTopOf="@+id/output"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/list" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/output"
@@ -53,32 +41,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/output"
         app:rowCount="6">
-
-        <Button
-            android:id="@+id/button_dot"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:text="@string/dot"
-            app:layout_column="0"
-            app:layout_columnSpan="1"
-            app:layout_columnWeight="1"
-            app:layout_row="5"
-            app:layout_rowWeight="1" />
-
-        <Button
-            android:id="@+id/button_del"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:text="@string/del"
-            app:layout_column="2"
-            app:layout_columnSpan="1"
-            app:layout_columnWeight="1"
-            app:layout_row="5"
-            app:layout_rowWeight="1" />
 
         <Button
             android:id="@+id/button_0"
@@ -147,10 +110,10 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:text="@string/div"
-            app:layout_column="3"
+            app:layout_column="2"
             app:layout_columnSpan="1"
             app:layout_columnWeight="1"
-            app:layout_row="3"
+            app:layout_row="5"
             app:layout_rowWeight="1" />
 
         <Button
@@ -162,8 +125,7 @@
             app:layout_column="3"
             app:layout_columnSpan="1"
             app:layout_columnWeight="1"
-            app:layout_row="4"
-            app:layout_rowSpan="2"
+            app:layout_row="5"
             app:layout_rowWeight="1" />
 
         <Button
@@ -196,10 +158,10 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:text="@string/mul"
-            app:layout_column="3"
+            app:layout_column="0"
             app:layout_columnSpan="1"
             app:layout_columnWeight="1"
-            app:layout_row="2"
+            app:layout_row="5"
             app:layout_rowWeight="1" />
 
         <Button
@@ -232,46 +194,10 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:text="@string/plus"
-            app:layout_column="0"
+            app:layout_column="3"
             app:layout_columnSpan="1"
             app:layout_columnWeight="1"
-            app:layout_row="1"
-            app:layout_rowWeight="1" />
-
-        <Button
-            android:id="@+id/button_parenthesis_l"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:text="@string/phl"
-            app:layout_column="0"
-            app:layout_columnSpan="1"
-            app:layout_columnWeight="1"
-            app:layout_row="0"
-            app:layout_rowWeight="1" />
-
-        <Button
-            android:id="@+id/button_parenthesis_r"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:text="@string/phr"
-            app:layout_column="1"
-            app:layout_columnSpan="1"
-            app:layout_columnWeight="1"
-            app:layout_row="0"
-            app:layout_rowWeight="1" />
-
-        <Button
-            android:id="@+id/button_pow"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:text="@string/pow"
-            app:layout_column="2"
-            app:layout_columnSpan="1"
-            app:layout_columnWeight="1"
-            app:layout_row="0"
+            app:layout_row="3"
             app:layout_rowWeight="1" />
 
         <Button
@@ -292,34 +218,10 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:text="@string/re"
-            app:layout_column="1"
-            app:layout_columnSpan="1"
-            app:layout_columnWeight="1"
-            app:layout_row="1"
-            app:layout_rowWeight="1" />
-
-        <Button
-            android:id="@+id/button_root"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:text="@string/root"
-            app:layout_column="2"
-            app:layout_columnSpan="1"
-            app:layout_columnWeight="1"
-            app:layout_row="1"
-            app:layout_rowWeight="1" />
-
-        <Button
-            android:id="@+id/button_divrem"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:text="@string/divrem"
             app:layout_column="3"
             app:layout_columnSpan="1"
             app:layout_columnWeight="1"
-            app:layout_row="1"
+            app:layout_row="4"
             app:layout_rowWeight="1" />
 
         <Button
@@ -332,7 +234,7 @@
             app:layout_column="3"
             app:layout_columnSpan="1"
             app:layout_columnWeight="1"
-            app:layout_row="0"
+            app:layout_row="2"
             app:layout_rowWeight="1" />
     </androidx.gridlayout.widget.GridLayout>
 
