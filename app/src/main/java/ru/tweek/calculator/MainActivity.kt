@@ -14,7 +14,7 @@ import kotlin.math.pow
 import kotlin.math.sqrt
 
 class MainActivity : AppCompatActivity() {
-    @SuppressLint("MissingInflatedId")
+    @SuppressLint("MissingInflatedId", "SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -48,8 +48,8 @@ class MainActivity : AppCompatActivity() {
             buttonPlus, buttonMinus, buttonDiv, buttonMul
         ).forEach { button: Button ->
             button.setOnClickListener {
-                output.text = input.text.toString()
                 if (input.text.isNotEmpty()){
+                    output.text = input.text.toString()
                     input.text = ""
                 }
                 action = button.text.toString()
